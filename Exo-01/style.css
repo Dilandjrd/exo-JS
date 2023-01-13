@@ -21,13 +21,6 @@
     font-size: 14px;
 }
 
-.form__section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
 .form__input {
     padding: 7px;
     font-family: sans-serif;
