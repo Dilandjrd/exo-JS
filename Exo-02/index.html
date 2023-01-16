@@ -10,33 +10,43 @@
 </head>
 
 <body>
+    <header class="header">
+        <h1 class="header__title">Pizza</h1>
+    </header>
     <form class="form" id="contactForm">
-        <input class="form__input" type="text" name="firstName" id="firstName" placeholder="Firstname">
-        <label class="error-message" for="firstName" id="firstNameError">Veuillez renseigner votre
-            prénom.</label>
-        <input class="form__input" type="text" name="lastName" id="lastName" placeholder="Lastname">
-        <label class="error-message" for="lastName" id="lastNameError">Veuillez renseigner votre nom.</label>
-        <input class="form__input" type="text" name="address" id="address" placeholder="Address">
-        <label class="error-message" for="address" id="addressError">Veuillez renseigner un email valide.</label>
-        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Phone number">
-        <label class="error-message" for="phone" id="phoneError">Veuillez renseigner un numéro de téléphone
-            valide.</label>
-        <select name="pizzaSize" id="pizzaSize">
-            <option value="">--Choisissez votre taille--</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-        </select>
-        <label class="error-message" for="pizzaSize" id="pizzaSizeError">Veuillez renseignez une taille pour votre pizza</label>
-        <select name="pizzaChoice" id="pizzaChoice">
-            <option value="">--Choisissez votre pizza--</option>
-            <option value="Savoyarde">Savoyarde</option>
-            <option value="Cannibal">Cannibal</option>
-            <option value="Margarita">Margarita</option>
-            <option value="4 Fromages">4 Fromages</option>
-            <option value="Reine">Reine</option>
-        </select>
-        <label class="error-message" for="pizzaChoice" id="pizzaChoiceError">Veuillez choisir une pizza</label>
+        <div class="input__container">
+            <input class="form__input" type="text" name="firstName" id="firstName" placeholder="Firstname">
+            <label class="error-message" for="firstName" id="firstNameError">Veuillez renseigner votre
+                prénom.</label>
+            <input class="form__input" type="text" name="lastName" id="lastName" placeholder="Lastname">
+            <label class="error-message" for="lastName" id="lastNameError">Veuillez renseigner votre nom.</label>
+        </div>
+        <div class="input__container">
+            <input class="form__input" type="text" name="address" id="address" placeholder="Address">
+            <label class="error-message" for="address" id="addressError">Veuillez renseigner une addresse valide.</label>
+            <input class="form__input" type="tel" name="phone" id="phone" placeholder="Phone number">
+            <label class="error-message" for="phone" id="phoneError">Veuillez renseigner un numéro de téléphone
+                valide.</label>
+        </div>
+        <div class="select__container">
+            <select class="form__select" name="pizzaSize" id="pizzaSize">
+                <option value="">--Choisissez votre taille--</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            <label class="error-message" for="pizzaSize" id="pizzaSizeError">Veuillez sélectionnez une taille pour votre
+                pizza.</label>
+            <select class="form__select" name="pizzaChoice" id="pizzaChoice">
+                <option value="">--Choisissez votre pizza--</option>
+                <option value="Savoyarde">Savoyarde</option>
+                <option value="Cannibal">Cannibal</option>
+                <option value="Margarita">Margarita</option>
+                <option value="4 Fromages">4 Fromages</option>
+                <option value="Reine">Reine</option>
+            </select>
+        </div>
+        <label class="error-message" for="pizzaChoice" id="pizzaChoiceError">Veuillez séléctionnez une pizza.</label>
         <button class="form__btn" type="submit">Commander</button>
         <input class="form__btn" type="reset" value="Annuler">
     </form>

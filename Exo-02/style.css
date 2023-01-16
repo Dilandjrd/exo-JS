@@ -12,7 +12,8 @@
 }
 
 .header__title {
-    font-size: 50px;
+    font-family: cursive;
+    font-size: 80px;
     color: white;
     text-align: center;
     font-weight: lighter;
@@ -30,9 +31,10 @@
     height: 400px;
 }
 
-.form__container {
+.input__container {
     display: flex;
     gap: 15px;
+    margin-top: 15px;
 }
 
 .error-message {
@@ -50,9 +52,22 @@
 
 }
 
+.select__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+
+}
+
 .form__select {
     padding: 5px;
-
+    width: 450px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .form__btn {
