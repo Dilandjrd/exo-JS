@@ -81,53 +81,24 @@ contactForm.addEventListener('submit', (event) => {
         console.log(formData)
     }
 
-    //function calculateTotalCost(pizzaSize, pizzaChoice) {
-        
-        //let sizeCost = 0;
-        //if ( pizzaSize === "small") {
-        //  sizeCost = 5;
-        //} else if (pizzaSize === "medium") {
-        //  sizeCost = 7;
-        //}else if (pizzaSize === "large") {
-        // sizeCost = 10;
-        //} else {
-        // return "Invalid size selected.";
-        //}
-      
-        //let pizzaCost = 0;
-        //pizzaChoice.forEach(function(pizzaChoice) {
-        //  if (pizzaChoice === "Savoyarde") {
-        //    pizzaCost += 5;
-        //  } else if (pizzaChoice === "Cannibal") {
-        //   pizzaCost += 5;
-        // } else if (pizzaChoice === "Margarita") {
-        //    pizzaCost += 5;
-        // } else if (pizzaChoice === "4 Fromages") {
-        //    pizzaCost += 5;
-        //  } else if (pizzaChoice === "Reine") {
-        //   pizzaCost += 5;
-        //  } else {
-        //    return "Invalid ingredient selected.";
-        //  }
-        //});
-      
-        
-        //let totalCost = pizzaCost + sizeCost;
-      
-     
-        //document.getElementById("totalCost").innerHTML = totalCost;
-      //}
+    
 
       let sizeCost = {
         small: 5,
         medium: 7,
         large:10,
       }
-      let pizzaCost = 5;
-      let totalCost = sizeCost + pizzaCost;
+      let pizzaCost = {
+        Savoyarde: 5,
+        Cannibal: 5,
+        Margarita: 5,
+        Fromages : 5,
+        Reines : 5,
+      }
+      let totalCost = sizeCost[pizzaSizeSelect.value] + pizzaCost[pizzaChoiceSelect.value];
     
       let totalCostElement = document.getElementById("totalCost");
-      totalCostElement.innerHTML = "Coût total : " + totalCost + "€";
+      totalCostElement.innerHTML = `Coût total :${totalCost}€`;
     
       alert("Merci pour votre commande!");
       
