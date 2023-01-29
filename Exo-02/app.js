@@ -77,49 +77,28 @@ contactForm.addEventListener('submit', (event) => {
         pizzaChoiceError.style.display = 'block'
     }
 
-    if (!Object.values(errors).includes(true)) {
-        console.log(formData)
-    }
+    let sizeCost = {
+        small: 5,
+        medium: 7,
+        large:10,
+      }
+      let pizzaCost = {
+        Savoyarde: 5,
+        Cannibal: 5,
+        Margarita: 5,
+        Fromages : 5,
+        Reines : 5,
+      }
+      let totalCost = sizeCost[pizzaSizeSelect.value] + pizzaCost[pizzaChoiceSelect.value];
 
-    
+      let totalCostElement = document.getElementById("totalCost");
+      totalCostElement.innerHTML = `Coût total :${totalCost}€`;
 
-      
-    function totalCost(){
-
-        let prix = 0
-
-        if(formData.pizzaSize == "Small"){
-            prix += 5;
-        }
-        if(formData.pizzaSize == "Medium"){
-            prix += 7;
-        }
-        if(formData.pizzaSize == "Large"){
-            prix += 10;
-        }
-        if(formData.pizzaChoice == "Savoyarde"){
-            prix += 5;
-        }
-
-        if(formData.pizzaChoice == "Canniball"){
-            prix += 5;
-        }
-        if(formData.pizzaChoice == "Maragarita"){
-            prix += 5;
-        }
-        if(formData.pizzaChoice == "Fromages"){
-            prix += 5;
-        }
-        if(formData.pizzaChoice == "Reine"){
-            prix += 5;
-        }
-        return prix;
-    }
+      alert("Merci pour votre commande!");
 
     if (!Object.values(errors).includes(true)) {
         console.log(formData);
-        console.log(totalCost());
-        alert("Merci pour votre commande !")
+        
         contactForm.reset();
     }
 })
